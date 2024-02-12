@@ -2,7 +2,7 @@ import React, {useRef, useState } from 'react'
 import './Image-generater.css'
 import default_image from '../Assets/default_image.jpg'
 const Imagegenerator = () => {
-
+const key= "Bearer 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";
   const[image_url,setImage_url]=useState("/")
   let inputRef = useRef(null);
   const [loading,setloading]=useState(false);
@@ -17,7 +17,7 @@ const response=await fetch("https://api.openai.com/v1/images/generations",{
   method:"POST",
   headers:{
     "content-Type":"application/json",
-    Authorization:"Bearer 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",
+    Authorization:key,
     "User-Agent":"Chrome"
 
   },body:JSON.stringify({
